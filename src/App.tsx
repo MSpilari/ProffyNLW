@@ -1,10 +1,15 @@
 import React from 'react';
+import { Switch } from 'react-router-dom'
 
 import './assets/styles/globalstyle.css'
+import Routes  from './routes'
+
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <Switch>
+      <Routes />
+    </Switch>
   );
 }
 

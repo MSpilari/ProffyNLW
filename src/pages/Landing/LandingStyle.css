@@ -1,0 +1,180 @@
+.LandingWrapper{
+    min-height: 100vh;
+    width: 100vw;
+    
+    background-color: var(--color-primary);
+}
+
+.landingImg{
+    width: 100%;
+    margin: 50px auto 10px auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoProffy{
+    width: 100%;
+    margin: 50px auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landingImg img,
+.logoProffy img{
+    width: 90%;
+    max-height: 200px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.textWrapper{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 15px;
+    margin-bottom: 20px;
+    font: 700 1.9rem Poppins;
+
+}
+
+.textWrapper span:nth-child(1){
+    color: var(--color-text-in-primary);
+}
+
+.textWrapper span:nth-child(2){
+    color: var(--color-title-in-primary);
+}
+
+.buttonWrapper{
+    width: 100%;
+    
+    margin: 40px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonWrapper a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 20px 24px;
+}
+
+.buttonWrapper a:nth-child(1){
+    background: var(--color-primary-lighter);
+
+    margin: 5px;
+    border-radius: 8px;
+    font: 700 1.6rem Achivo;
+    color: var(--color-title-in-primary);
+    text-decoration: none;
+}
+
+.buttonWrapper a:nth-child(1):hover{
+    background-color: var(--color-primary-light);
+}
+
+.buttonWrapper a:nth-child(2):hover{
+    background-color: var(--color-secundary-dark);
+
+}
+.buttonWrapper a:nth-child(2){
+    background: var(--color-secundary);
+
+    margin: 5px;
+    border-radius: 8px;
+    font: 700 1.6rem Achivo;
+    color: var(--color-title-in-primary);
+    text-decoration: none;
+}
+
+.buttonWrapper a img{
+    width: 30px;
+    margin-right: 5px;
+}
+
+.connectionWrapper{
+    width: 100%;
+    
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-title-in-primary);
+}
+
+.connectionWrapper p{
+    margin-right:  5px;
+}
+
+@media(min-width:768px){
+    .LandingWrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 275px 0.5fr 1fr;
+        grid-template-areas: 
+            'Proffy ImgProffy ImgProffy'
+            'TextApr ImgProffy ImgProffy'
+            'Buttons Buttons TextHeart';
+    }
+
+    .logoProffy{
+        grid-area: Proffy;
+        display: flex;
+        align-items: flex-end;
+        margin:0px;
+    }
+
+    .landingImg{
+        margin: 0px;
+        grid-area: ImgProffy;
+    }
+
+    .landingImg img,
+    .logoProffy img{
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .textWrapper{
+        grid-area: TextApr;
+        display: flex;
+        justify-content: center;
+        padding-left: 85px;
+        margin: 0;
+        font-size: 25px;
+    }
+
+    .buttonWrapper{
+        grid-area: Buttons;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .buttonWrapper a{
+        width: 45%;
+        height: 35%;
+        max-width: 300px;
+        max-height: 200px;
+
+    }
+
+    .connectionWrapper{
+        grid-area: TextHeart;
+        display: flex;
+    }
+
+    .connectionWrapper img{
+        margin-right: 10px;
+    }
+}
