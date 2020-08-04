@@ -1,0 +1,38 @@
+.animatedInput{
+    display: flex;
+    position: relative;
+    height: 40px;
+    margin: 10px 0;
+}
+
+.animatedInput input{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    padding: 5px 6px;
+}
+
+.animatedInput label{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font: 400 1.6rem Archivo;
+    color: var(--color-text-base);
+    transition: all 0.5s;
+    pointer-events: none;
+}
+
+.animatedInput input:focus ~ label,
+.animatedInput input:valid ~label{
+    font-size: 1.2rem;
+    top:0;
+}
+
+@media(min-width:1024px){
+    .animatedInput{
+        margin-right: 20px;
+    }
+}
