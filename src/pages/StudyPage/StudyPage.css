@@ -1,55 +1,5 @@
 .pageStudy {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 
-.allWrapper{
-    background-color: var(--color-primary);    
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.linksWrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 90%;
-    margin: 10px auto;
-}
-
-.linksWrapper > img {
-    width: 50px;
-}
-
-.textWrapper{
-    width: 60%;
-
-    margin: 30px auto;
-}
-
-.textWrapper strong{
-    color: var(--color-title-in-primary);
-    width: 234px;
-}
-
-.inputsWrapper{
-    width: 80%;
-    margin: 10px auto;
-}
-
-@media(min-width:1024px){
-    .inputsWrapper{
-        position: absolute;
-        bottom: -31px;
-        width: 80%;
-        
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-    }
-}
