@@ -1,0 +1,23 @@
+.teacherPage{
+    height: 100vh;
+    width: 100vw;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+fieldset{
+    width: 90%;
+    position: absolute;
+    top: -20px;
+    border-radius: 8px;
+    background-color: var(--color-box-base);
+    padding: 10px 0;
+    
+}

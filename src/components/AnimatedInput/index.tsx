@@ -3,14 +3,15 @@ import React from 'react'
 import './style.css'
 
 interface AnimatedInputProps {
-    labelChoose: string
+    labelChoose: string,
+    name: string
 }
 
-const AnimatedInput : React.FC<AnimatedInputProps> = ({ labelChoose }) => {
+const AnimatedInput : React.FC<AnimatedInputProps> = ({ labelChoose, name }) => {
     return(
         <div className='animatedInput'>
-            <input name="Class" type="text" required />
-            <label htmlFor="Class">{labelChoose}</label>
+            <input name={name} type="text" required />
+            <label htmlFor={name}>{labelChoose}</label>
         </div>
     )
 }

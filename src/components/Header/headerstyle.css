@@ -32,6 +32,13 @@
     width: 234px;
 }
 
+.textWrapper p {
+    font: 400 1.5rem Poppins;
+    margin: 10px 0;
+    color: var(--color-text-complement);
+}
+
+
 .inputsWrapper{
     width: 80%;
     margin: 10px auto;

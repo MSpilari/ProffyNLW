@@ -8,7 +8,7 @@ import "./StudyPage.css";
 const StudyPage = () => {
   return (
     <div className="pageStudy">
-      <HeadComp title={"Estes são os Proffys disponíveis."} />
+      <HeadComp title={"Estes são os Proffys disponíveis."} study />
       <TeacherCard />      
     </div>
   );
