@@ -1,21 +1,22 @@
-.animatedInput{
+.animatedTextArea{
     display: flex;
     position: relative;
-    height: 40px;
+    height: 100px;
     margin: 10px 0;
 }
 
-.animatedInput input{
+.animatedTextArea textarea{
     width: 100%;
     height: 100%;
     border-radius: 6px;
     border: none;
     outline: none;
     font-size: 1.4rem;
-    padding: 5px 6px;
+    padding: 15px 6px;
+    resize: none;
 }
 
-.animatedInput label{
+.animatedTextArea label{
     position: absolute;
     top: 10px;
     left: 5px;
@@ -25,18 +26,18 @@
     pointer-events: none;
 }
 
-.animatedInput input:focus{
+.animatedTextArea textarea:focus{
     border-bottom: 2px solid var(--color-primary);
 }
 
-.animatedInput input:focus ~ label,
-.animatedInput input:valid ~label{
+.animatedTextArea textarea:focus ~ label,
+.animatedTextArea textarea:valid ~label{
     font-size: 1.2rem;
     top:0;
 }
 
 @media(min-width:1024px){
-    .animatedInput{
+    .animatedTextArea{
         margin-right: 20px;
     }
 }
