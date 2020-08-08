@@ -22,14 +22,14 @@
 }
 
 .textWrapper{
-    width: 60%;
+    width: 80%;
 
     margin: 30px auto;
 }
 
 .textWrapper strong{
     color: var(--color-title-in-primary);
-    width: 234px;
+    width: 70%;
 }
 
 .textWrapper p {
@@ -53,5 +53,9 @@
         display: flex;
         justify-content: center;
         margin: 0 auto;
+    }
+    
+    .inputsWrapper div:nth-child(3){
+        width: 200px;
     }
 }

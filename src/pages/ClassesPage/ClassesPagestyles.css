@@ -60,6 +60,7 @@ fieldset{
     background-color: var(--color-box-base);
     font: 700 1.6rem Archivo;
     color: var(--color-primary-dark);
+    transition: opacity 0.5s;
 }
 
 .fieldsetTitle button:hover{
@@ -75,31 +76,76 @@ fieldset h1{
 
 .warningWrapper{
     display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-.warningWrapper img{
-    width: 15%;
-    max-width: 100px;
-    margin: 0 10px;
+    margin: 10px 0;
 }
 
 .warningWrapper span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font: 400 1.5rem Poppins;
+    margin-left: 30px;
+}
+.warningWrapper span img{
+    width: 15%;
+    max-width: 100px;
+    margin: 0 10px;
+
 }
 
-.fieldSetWrapper > button{
+
+.warningWrapper > button{
     border: none;
     background-color: var(--color-secundary);
-    width: 50%;
+    width: 80%;
     height: 50px;
     margin: 10px 0;
     border-radius: 8px;
     font: 700 1.6rem Archivo;
     color: var(--color-button-text);
+    transition: background-color 0.2s;
 }
 
-.fieldSetWrapper > button:hover{
+.warningWrapper > button:hover{
     background-color: var(--color-secundary-dark);
     cursor: pointer;    
 }
+
+@media(min-width:768px){
+    .warningWrapper{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+
+    .warningWrapper span img{
+        width: 35%;
+        max-width: 100px;
+        margin: 0 10px;
+    }
+
+    .warningWrapper > button{
+        margin: 0 5px;
+        max-width: 300px;
+    }
+
+    .hoursWrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas: 'subject from to';
+    }
+
+    .hoursWrapper div:nth-child(1){
+        grid-area: subject;
+    }
+    .hoursWrapper div:nth-child(2){
+        grid-area: from;
+    }
+    .hoursWrapper div:nth-child(3){
+        grid-area: to;
+    }
+}
+

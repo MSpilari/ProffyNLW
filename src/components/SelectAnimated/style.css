@@ -1,11 +1,11 @@
-.animatedInput{
+.SelectAnimated{
     display: flex;
     position: relative;
     height: 40px;
     margin: 10px 0;
 }
 
-.animatedInput input{
+.SelectAnimated select{
     width: 100%;
     height: 100%;
     border-radius: 6px;
@@ -15,7 +15,7 @@
     padding: 10px 6px;
 }
 
-.animatedInput label{
+.SelectAnimated label{
     position: absolute;
     top: 10px;
     left: 5px;
@@ -25,18 +25,18 @@
     pointer-events: none;
 }
 
-.animatedInput input:focus{
+.SelectAnimated select:focus{
     border-bottom: 2px solid var(--color-primary);
 }
 
-.animatedInput input:focus ~ label,
-.animatedInput input:valid ~label{
+.SelectAnimated select:focus ~ label,
+.SelectAnimated select:valid ~label{
     font-size: 1.2rem;
-    top:-5px;
+    top:-2px;
 }
 
 @media(min-width:1024px){
-    .animatedInput{
+    .SelectAnimated{
         margin-right: 20px;
     }
 }

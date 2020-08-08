@@ -6,6 +6,7 @@ import Back from "../../assets/images/icons/back.svg";
 import Logo from "../../assets/images/logo.svg";
 
 import AnimatedInput from '../../components/AnimatedInput';
+import SelectAnimated from '../../components/SelectAnimated';
 
 import './headerstyle.css';
 
@@ -34,9 +35,35 @@ const HeaderComp : React.FC<HeaderCompProps> = ({ title, study, teacher }) => {
       {
         study && 
           <div className="inputsWrapper">
-            <AnimatedInput labelChoose="Matéria" name={'subject'} />
-            <AnimatedInput labelChoose="Dia da semana" name={'week_day'} />
-            <AnimatedInput labelChoose="Horário" name={'time'} />
+            <SelectAnimated 
+              labelChoose="Matéria" 
+              name={'subject'}
+              options={[
+                {value:'Física', label: 'Física'},
+                {value:'Química', label: 'Química'},
+                {value:'Matemática', label: 'Matemática'},
+                {value:'Artes', label: 'Artes'},
+                {value:'Gramática', label: 'Gramática'},
+                {value:'Biologia', label: 'Biologia'},
+                {value:'Educação Física', label: 'Educação Física'},
+                {value:'História', label: 'História'},
+                {value:'Geografia', label: 'Geografia'},
+              ]} 
+            />
+            <SelectAnimated 
+                labelChoose={"Dia da semana"} 
+                name={"week_day"}
+                options={[
+                  {value:'0', label: 'Domingo'},
+                  {value:'1', label: 'Segunda-feira'},
+                  {value:'2', label: 'Terça-feira'},
+                  {value:'3', label: 'Quarta-feira'},
+                  {value:'4', label: 'Quinta-feira'},
+                  {value:'5', label: 'Sexta-feira'},
+                  {value:'6', label: 'Sábado'},
+                ]}
+              />
+            <AnimatedInput labelChoose="Horário" name={'time'} type={'time'}/>
           </div>
       }
       
