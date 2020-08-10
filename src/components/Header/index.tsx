@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -17,6 +17,10 @@ interface HeaderCompProps{
 }
 
 const HeaderComp : React.FC<HeaderCompProps> = ({ title, study, teacher }) => {
+  const [subject, setSubject] = useState(() => '')
+  const [week_day, setWeek_day] = useState(() => '')
+  const [time, setTime] = useState(() => '')
+  
   return (
     <div className="allWrapper">
       <div className="linksWrapper">
@@ -38,6 +42,8 @@ const HeaderComp : React.FC<HeaderCompProps> = ({ title, study, teacher }) => {
             <SelectAnimated 
               labelChoose="Matéria" 
               name={'subject'}
+              value={subject}
+              onChange={e => setSubject(e.target.value)}
               options={[
                 {value:'Física', label: 'Física'},
                 {value:'Química', label: 'Química'},
@@ -53,6 +59,8 @@ const HeaderComp : React.FC<HeaderCompProps> = ({ title, study, teacher }) => {
             <SelectAnimated 
                 labelChoose={"Dia da semana"} 
                 name={"week_day"}
+                value={week_day}
+                onChange={e => setWeek_day(e.target.value)}
                 options={[
                   {value:'0', label: 'Domingo'},
                   {value:'1', label: 'Segunda-feira'},
@@ -63,7 +71,13 @@ const HeaderComp : React.FC<HeaderCompProps> = ({ title, study, teacher }) => {
                   {value:'6', label: 'Sábado'},
                 ]}
               />
-            <AnimatedInput labelChoose="Horário" name={'time'} type={'time'}/>
+            <AnimatedInput 
+              labelChoose="Horário" 
+              name={'time'} 
+              type={'time'} 
+              value={time} 
+              onChange={e => setTime(e.target.value)}
+              />
           </div>
       }
       
