@@ -144,7 +144,9 @@ const ClassesPage = () => {
             <fieldset>
               <div className="fieldsetTitle">
                 <h1>Horários disponíveis</h1>
+                
                 <button
+                  className='moreSchedule'
                   type="button"
                   onClick={() =>
                     setAllSchedules([...AllSchedules, firstSchedule])

@@ -3,3 +3,64 @@
   width: 100vw;
 }
 
+form.FormWrapper{
+  width: 100%;
+  height: fit-content;
+  margin-top: -1px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  background-color: var(--color-primary);
+}
+
+.inputsWrapper{
+  width: 80%;
+  margin: 10px auto;
+}
+
+button{
+  width: 100%;
+  height: 40px;
+  font: 700 1.6rem Archivo;
+  color: var(--color-button-text);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: var(--color-secundary);
+}
+
+@media(min-width:1024px){
+  .inputsWrapper{
+      position: absolute;
+      bottom: -31px;
+      width: 80%;
+      
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+  }
+  
+  .inputsWrapper div:nth-child(3){
+      width: 200px;
+  }
+
+  .inputsWrapper button{
+      width: 15%;
+      height: 35px;
+      margin-top: 8px;
+
+      cursor: pointer;
+
+      font: 700 1.6rem Archivo;
+      
+      border-radius: 8px;
+      border: none;
+      background-color: var(--color-secundary);
+  }
+
+  .inputsWrapper button:hover{
+      background-color: var(--color-secundary-dark);
+  }
+}

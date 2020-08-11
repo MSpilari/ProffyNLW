@@ -55,7 +55,7 @@ fieldset{
     width: 100%;
 }
 
-.fieldsetTitle button{
+.fieldsetTitle button.moreSchedule{
     border: none;
     background-color: var(--color-box-base);
     font: 700 1.6rem Archivo;
@@ -63,7 +63,7 @@ fieldset{
     transition: opacity 0.5s;
 }
 
-.fieldsetTitle button:hover{
+.fieldsetTitle button.moreSchedule:hover{
     opacity: 0.6;
     cursor: pointer;
 }
@@ -114,6 +114,9 @@ fieldset h1{
 }
 
 @media(min-width:768px){
+    .fieldsetTitle button.moreSchedule{
+        width: 15%;
+    }
     .warningWrapper{
         flex-direction: row;
         justify-content: space-evenly;
