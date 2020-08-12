@@ -1,66 +1,76 @@
-import React from 'react'
+import React from "react";
 
 import PurpleHeart from "../../assets/images/icons/purple-heart.svg";
 import Whatsapp from "../../assets/images/icons/whatsapp.svg";
 
-import './TeacherCardStyles.css'
-import Busca from '../Busca';
+import "./TeacherCardStyles.css";
+import api from "../../services/api";
 
-
-interface TeacherCardProps{
-    teacher:{
-      avatar?: string,
-      name?: string,
-      subject?: string,
-      whatsapp?: string,
-      bio?: string,
-      cost?: Number,
-    }  
-  
+export interface TeacherCardProps {
+  id: number;
+  avatar: string;
+  name: string;
+  subject: string;
+  whatsapp: string;
+  bio: string;
+  cost: number;
+  user_id: number;
 }
 
-const TeacherCard: React.FC<TeacherCardProps> = ({teacher}) => {
-  
-  if(teacher.name !== undefined){
-    return(
-      <div className="cardWrapper">
+interface TeacherObject {
+  teacherObj: TeacherCardProps;
+}
+
+const TeacherCard: React.FC<TeacherObject> = ({ teacherObj }) => {
+  function Connected(id: Number) {
+    api
+      .post("connections", {
+        user_id: id,
+      })
+      .then(() => alert("Conexão realizada com o Proffy !!"))
+      .catch((response) => console.log(response));
+  }
+
+  return (
+    <div className="cardWrapper">
       <div className="photoNameWrapper">
         <div className="photo">
-          <img
-            src={teacher.avatar}
-            alt="Foto do Proffy"
-          />
+          <img src={teacherObj.avatar} alt="Foto do Proffy" />
         </div>
         <div className="nameWrapper">
-          <strong>{teacher.name}</strong>
-          <span>{teacher.subject}</span>
+          <strong>{teacherObj.name}</strong>
+          <span>{teacherObj.subject}</span>
         </div>
       </div>
       <div className="welcomeTextWrapper">
-        <p>
-          {teacher.bio}
-        </p>
+        <p>{teacherObj.bio}</p>
       </div>
       <div className="priceWrapper">
         <span>Preço/Hora</span>
-        <strong>R$ {teacher.cost}</strong>
+        <strong>
+          {teacherObj.cost.toLocaleString("pt-BR", {
+            minimumFractionDigits: 2,
+            style: "currency",
+            currency: "BRL",
+          })}
+        </strong>
       </div>
       <div className="ContactWrapper">
         <button>
           <img src={PurpleHeart} alt="Favoritar" />
         </button>
-        <button>
+        <a
+          href={`https://wa.me/55${teacherObj.whatsapp}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => Connected(teacherObj.id)}
+        >
           <img src={Whatsapp} alt="Whatsapp Icon" />
           <span>Entrar em contato</span>
-        </button>
+        </a>
       </div>
     </div>
-    )
-  }else{
-    return <Busca />
-  }
-  
-  
-}
+  );
+};
 
-export default TeacherCard
+export default TeacherCard;

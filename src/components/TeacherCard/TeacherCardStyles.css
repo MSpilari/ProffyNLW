@@ -1,160 +1,198 @@
 .cardWrapper {
-    width: 90%;
-    margin: 10px auto;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
-    background-color: var(--color-input-background);
-    border-radius: 7px;
+  width: 90%;
+  margin: 10px auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-input-background);
+  border-radius: 7px;
+}
+
+.photoNameWrapper {
+  width: 100%;
+  margin: 20px 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.photo {
+  width: 70px;
+  height: 60px;
+  margin: 0 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.nameWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: 3%;
+}
+
+.nameWrapper strong {
+  font: 700 1.8rem Poppins;
+  color: var(--color-text-title);
+}
+
+.nameWrapper span {
+  color: var(--color-text-complement);
+  font: 400 1.6rem Poppins;
+}
+
+.welcomeTextWrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  margin: 5px auto;
+}
+
+.welcomeTextWrapper span,
+.welcomeTextWrapper p {
+  font: 400 1.6rem Poppins;
+  margin-bottom: 15px;
+  color: var(--color-text-base);
+}
+
+.priceWrapper {
+  width: 90%;
+
+  margin: 5px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.priceWrapper span {
+  font: 400 1.6rem Poppins;
+  margin-right: 8px;
+  color: var(--color-text-base);
+}
+
+.priceWrapper strong {
+  font: 700 1.8rem Poppins;
+  color: var(--color-text-title);
+}
+
+.ContactWrapper {
+  width: 95%;
+  height: 50px;
+  margin: 18px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContactWrapper button:nth-child(1) {
+  width: 20%;
+  max-width: 70px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 20px;
+  outline: none;
+  cursor: pointer;
+
+  border-radius: 8px;
+  border: none;
+  background: var(--color-primary-dark);
+}
+
+.ContactWrapper button:nth-child(1):hover {
+  background: var(--color-primary-darker);
+}
+
+.ContactWrapper button:nth-child(1) img {
+  width: 50%;
+  max-width: 30px;
+}
+
+.ContactWrapper a {
+  width: 70%;
+  max-width: 270px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin-right: 20px;
+  outline: none;
+  cursor: pointer;
+
+  border-radius: 8px;
+  border: none;
+  background: var(--color-secundary);
+  text-decoration: none;
+}
+
+.ContactWrapper a:hover {
+  background-color: var(--color-secundary-dark);
+}
+
+.ContactWrapper a span {
+  font: 700 1.6rem Archivo;
+  color: var(--color-button-text);
+}
+
+@media (min-width: 768px) {
+  .cardWrapper {
+    width: 65%;
+    margin: 50px auto;
   }
-  
+}
+
+@media (min-width: 1024px) {
+  .cardWrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "nome"
+      "bio"
+      "preço";
+    width: 65%;
+    margin: 50px auto;
+  }
+
   .photoNameWrapper {
-    width: 100%;
-    margin: 20px 0;
-  
-    display: flex;
-    align-items: center;
+    grid-area: nome;
   }
-  
-  .photo {
-    width: 70px;
-    height: 60px;
-    margin: 0 10px;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .photo img {
-    width: 100%;
-    border-radius: 30px;
-  }
-  
-  .nameWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  
-    margin-left: 3%;
-  }
-  
-  .nameWrapper strong {
-    font: 700 1.8rem Poppins;
-    color: var(--color-text-title);
-  }
-  
-  .nameWrapper span {
-    color: var(--color-text-complement);
-    font: 400 1.6rem Poppins;
-  }
-  
+
   .welcomeTextWrapper {
-    display: flex;
-    flex-direction: column;
-  
-    width: 90%;
-    margin: 5px auto;
+    grid-area: bio;
   }
-  
-  .welcomeTextWrapper span,
-  .welcomeTextWrapper p {
-    font: 400 1.6rem Poppins;
-    margin-bottom: 15px;
-    color: var(--color-text-base);
-  }
-  
+
   .priceWrapper {
-    width: 90%;
-  
-    margin: 5px auto;
-  
+    grid-area: preço;
+
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+
+    margin: 0 50px;
   }
-  
-  .priceWrapper span {
-    font: 400 1.6rem Poppins;
-    margin-right: 8px;
-    color: var(--color-text-base);
-  }
-  
-  .priceWrapper strong {
-    font: 700 1.8rem Poppins;
-    color: var(--color-text-title);
-  }
-  
+
   .ContactWrapper {
-    width: 95%;
-    height: 50px;
-    margin: 18px auto;
-  
+    grid-area: preço;
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .ContactWrapper button:nth-child(1) {
-    width: 20%;
-    max-width: 70px;
-    height: 100%;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    margin-right: 20px;
-    outline: none;
-    cursor: pointer;
-  
-    border-radius: 8px;
-    border: none;
-    background: var(--color-primary-dark);
-  }
 
-  .ContactWrapper button:nth-child(1):hover{
-      background: var(--color-primary-darker);
+    margin-left: 130px;
   }
-  
-  .ContactWrapper button:nth-child(1) img {
-    width: 50%;
-    max-width: 30px ;
-  }
-  
-  .ContactWrapper button:nth-child(2) {
-    width: 70%;
-    max-width: 270px;
-    height: 100%;
-  
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  
-    margin-right: 20px;
-    outline: none;
-    cursor: pointer;
-  
-    border-radius: 8px;
-    border: none;
-    background: var(--color-secundary);
-  }
-
-  .ContactWrapper button:nth-child(2):hover{
-      background-color: var(--color-secundary-dark);
-  }
-  
-  .ContactWrapper button:nth-child(2) span {
-    font: 700 1.6rem Archivo;
-    color: var(--color-button-text);
-  }
-  
-  @media(min-width:768px){
-    .cardWrapper{
-      width: 65%;
-      margin: 50px auto;
-    }
-  }
+}

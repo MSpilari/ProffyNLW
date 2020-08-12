@@ -130,6 +130,8 @@ const ClassesPage = () => {
                   { value: "Educação Física", label: "Educação Física" },
                   { value: "História", label: "História" },
                   { value: "Geografia", label: "Geografia" },
+                  { value: "Inglês", label: "Inglês" },
+                  { value: "Espanhol", label: "Espanhol" },
                 ]}
               />
               <AnimatedInput
