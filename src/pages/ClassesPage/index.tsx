@@ -59,17 +59,7 @@ const ClassesPage = () => {
     }).catch(() => {
       alert('Erro no cadastro.')
     })
-    
-    console.log({
-      name,
-      avatar,
-      whatsapp,
-      bio,
-      subject,
-      cost,
-      AllSchedules
-    })
-    
+
     history.push('/')
   }
   return (

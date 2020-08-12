@@ -1,7 +1,12 @@
 import axios from 'axios'
 
+const baseURL = document.location.hostname === 'localhost' ? 
+        'http://localhost:3333' : 
+        'https://apiproffydb.herokuapp.com' 
+
+
 const api = axios.create({
-    baseURL: 'http://localhost:3333'
+    baseURL: baseURL
 });
 
 export default api
