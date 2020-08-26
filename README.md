@@ -4,7 +4,7 @@
 ![GitHub](https://img.shields.io/github/license/MSpilari/ProffyNLW?style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/MSpilari/ProffyNLW?style=plastic)
 
-Projeto criado durante a NLW#2.
+Projeto criado durante a NLW#2 da [Rocketseat](https://rocketseat.com.br/).
 
 ## Veja o app
 
